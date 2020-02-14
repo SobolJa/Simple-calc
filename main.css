@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* My custom Variables */
+:root {
+    --color: #4a7ac4;
+    --padding: 8px;
+    --row-padding: 50px;
+    --width-res: 15%;
+    --heigth-row: 30px;
+    --inputTextHeight: 1.5rem
+}
+
+/* Inherit */
+body {
+    color: var(--color);
+    font-weight: 600;
+}
+
+[type="text"] {
+    height: var(--inputTextHeight);
+    width: 20%;
+    border: 3px solid var(--color);
+    outline: none;
+    padding: 10px 5px;
+    color: var(--color);
+}
+
+[type="text"]::placeholder {
+    color: var(--color);
+}
+
+[type="checkbox"] {
+    border: 3px solid var(--color);
+}
+
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+/* ===================================================================== */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 3px solid var(--color);
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked~.checkmark {
+    background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 9px;
+    height: 14px;
+    border: solid var(--color);
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* Checbokcs positions */
+.container-checkbox:nth-child(1) span {
+    top: 5px;
+    left: 5px;
+}
+
+.container-checkbox:nth-child(2) span {
+    left: 5px;
+    top: 35px;
+}
+
+.container-checkbox:nth-child(3) span {
+    left: 5px;
+    top: 65px;
+}
+
+/* Castom checker */
+.wrapp__checker {
+    height: 100px;
+    width: 40px;
+    position: relative;
+    border-top: 3px solid var(--color);
+    border-bottom: 3px solid var(--color);
+    border-left: 3px solid var(--color);
+}
+
+/* Containers with inscription "Number" */
+.wrapp__container {
+    border-left: 3px solid var(--color);
+    border-right: 3px solid var(--color);
+    width: 6rem;
+    font-weight: 600;
+    padding: var(--padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-col .wrapp__container {
+    height: var(--row-padding);
+   
+}
+
+.my-col{
+    transition: all .2s;
+}
+
+.wrapp__res>.wrapp__container:nth-child(2) {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.title {
+    border: 3px solid transparent;
+}
+
+/* Position of result */
+.result {
+    width: 6rem;
+    border-bottom: 0;
+    border-top: 3px solid var(--color);
+    margin-left: auto;
+}
+
+.cus-border {
+    border: 3px solid var(--color);
+}
+
+.line-height {
+    width: 90%;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.wrapp__header {
+    margin-left: 10%;
+    width: 90%;
+}
+
+.wrapp__checkers {
+    width: 10%;
+}
+
+.wrapp__calc {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid var(--color);
+    border-bottom: 3px solid var(--color);
+}
+
+.inp {
+    height: var(--row-padding);
+    align-items: center;
+}
+
+.wrapp__calc>div {
+    align-items: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.wrapp__calc>div:nth-child(2) {
+    border-top: 3px solid var(--color);
+    border-bottom: 3px solid var(--color);
+}
+
+.wrapp__calc:nth-child(2) {
+    border-left: 3px solid var(--color);
+}
+
+.wrapp__res {
+    min-width: var(--width-res);
+}
+
+.wrapp__checkers-container {
+    margin-left: auto;
+}
+
+/* Radius modal */
+.modal-content {
+    border-radius: 70px;
+    padding: 50px 60px 50px 50px;
+    /* padding-bottom: 50px; */
+}
+
+
+/* Footer modal */
+.wrapp__footer {
+    margin-top: 15px;
+    margin-left: 10%;
+}
+
+
+/* Castom radio-button */
+/* ===================================================================== */
+.container-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 25px;
+    margin: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 20px;
+}
+
+/* Hide the browser's default radio button */
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark-radio {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 20px;
+    width: 20px;
+    border: 3px solid var(--color);
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input~.checkmark-radio {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked~.checkmark-radio {
+    border: 3px solid var(--color);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark-radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-radio input:checked~.checkmark-radio:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radio .checkmark-radio:after {
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color);
+}
+
+.footer__boxes label {
+    display: inline-block;
+    border: 3px solid var(--color);
+    margin-top: 10px;
+    margin-right: 15px;
+    padding: 2px 5px 2px 25px;
+    color: var(--color);
+    font-weight: 600;
+
+}

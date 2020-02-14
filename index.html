@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- main CSS -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <button type="button" id="modal-open" class="btn btn-primary" data-toggle="modal"
+        data-target=".bd-example-modal-lg">Large
+        modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg  " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog  modal-lg" role="document">
+
+            <div class="modal-content ">
+                <div class="wrapp">
+                    <div class="wrapp__header ">
+                        <div class="d-flex justify-content-between">
+                            <div class="line-height">Simple Calc</div>
+                            <div class="wrapp__container text-center result">Result</div>
+                        </div>
+                    </div>
+                    <!-- Checkbox -->
+                    <div class="wrapp__body d-flex justify-content-center">
+                        <div class="wrapp__checkers  d-flex justify-content-center ">
+                            <div class="wrapp__checkers-container d-flex justify-content-center  flex-column">
+                                <div class="wrapp__checker  d-flex justify-content-end ">
+                                    <form action="#" id="form-checker" name="form">
+                                        <label class="container-checkbox">
+                                            <input type="checkbox" value="one">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapp__calc">
+                            <div class="d-flex justify-content-between my-col">
+                                <div class="inp d-flex justify-content-around">
+                                    <input type="text" placeholder="input ...">
+                                    <input type="text">
+                                    <input type="text">
+                                </div>
+                                <div class="wrapp__container">Number</div>
+                            </div>
+                            <div class="d-flex justify-content-between my-col">
+                                <div class="inp d-flex justify-content-around">
+                                    <input type="text">
+                                    <input type="text">
+                                    <input type="text">
+                                </div>
+                                <div class="wrapp__container">Number</div>
+                            </div>
+                            <div class="d-flex justify-content-between my-col">
+                                <div class="inp d-flex justify-content-around">
+                                    <input type="text">
+                                    <input type="text">
+                                    <input type="text">
+                                </div>
+                                <div class="wrapp__container">Number</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="wrapp__footer">
+                        <h5>Choose box</h5>
+                        <div class="footer__boxes">
+                            <form action="#" id="math-operatin">
+                                    <label class="container-radio">Sum
+                                        <input type="radio" checked="checked" name="radio" value="sum">
+                                        <span class="checkmark-radio"></span>
+                                    </label>
+                                    <label class="container-radio">Multiplay
+                                        <input type="radio" name="radio" value="multiplay">
+                                        <span class="checkmark-radio"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!-- main JavaScript -->
+    <script src="main.js"></script>
+</body>
+
+</html>
